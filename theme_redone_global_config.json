@@ -1,4 +1,4 @@
 {
   "BLOCK_NAME_PREFIX": "custom",
-  "LOCALHOST_PROJECT_URL": "localhost/webredone"
+  "LOCALHOST_PROJECT_URL": "http://webredone.local"
 }

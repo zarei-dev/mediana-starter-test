@@ -1,1 +1,104 @@
 // single post css here
+.sms-webservice-row.wp-block-columns {
+    justify-content: center;
+
+    .wp-block-column {
+        max-width: 645px;
+    }
+}
+
+.sms-webservice-wrapper {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1% 8% 3% 9%;
+
+    .sms-tabs {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        align-self: center;
+        justify-content: center;
+        flex-grow: 0;
+        background-color: #26262603;
+        align-self: flex-start;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        align-items: center;
+        border-width: 1px 1px 0 1px;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+        display: flex;
+        overflow: hidden;
+        z-index: 1;
+
+        .sms-tab {
+            border-style: solid;
+            border-width: 0 0 1px 0;
+            border-color: #636363;
+            cursor: pointer;
+            outline: none;
+            flex-grow: inherit;
+            width: 100%;
+
+            &.active-tab {
+                border-color: #fff;
+                .sms-tab-inner {
+                    .sms-tab-text {
+                        color: #fff;
+                    }
+                }
+            }
+
+            &:hover {
+                margin: 0 1px 0 1px;
+                border-style: solid;
+                border-width: 0 0 1px 0;
+                border-color: #fff;
+            }
+            .sms-tab-inner {
+                padding: 10px 30px 10px 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: row nowrap;
+                flex-direction: row-reverse;
+                .sms-tab-text {
+                    color: #9B9B9B;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+
+
+    .sms-code {
+        height: 300px;
+        padding: 10px;
+        margin: 8px;
+        direction: ltr;
+        overflow-x: auto;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+        
+        pre {
+            font-size: 12px;
+            color: #ccc;
+            background: 0 0;
+            font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+            tab-size: 4;
+            hyphens: none;
+        }
+    }
+}
