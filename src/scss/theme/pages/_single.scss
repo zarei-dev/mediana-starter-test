@@ -1,10 +1,17 @@
 // single post css here
 .sms-webservice-row.wp-block-columns {
     justify-content: center;
+    @media screen and (min-width: 767px) {
+        padding: 150px 10px;
+    }
 
     .wp-block-column {
         max-width: 645px;
     }
+}
+
+main.main-content > .content {
+    background-color:#262626;
 }
 
 .sms-webservice-wrapper {
@@ -102,3 +109,24 @@
         }
     }
 }
+
+@media screen and (min-width: 767px) {
+    .md\:pl-35 {
+        padding-left: 8.75rem;
+    }
+    .md\:pl-70 {
+        padding-left: 17.5rem;
+    }
+}
+
+.web-service-cta a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
