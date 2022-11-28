@@ -8,85 +8,107 @@ final class Template4b33fde446 extends Latte\Runtime\Template
 
 	public function main(array $ʟ_args): void
 	{
+		extract($ʟ_args);
+		unset($ʟ_args);
+
 		echo '<div class="sms-webservice-wrapper" style="background-image:url(\'';
 		echo tr_get_img_path('Laptop_mockup.webp') /* line 1 */;
 		echo '\')">
   <div class="sms-tabs">
 
-    <div class="sms-tab active-tab" data-tab="1" role="tab">
+';
+		foreach ($iterator = $ʟ_it = new Latte\Essential\CachingIterator($code, $ʟ_it ?? null) as $el) /* line 4 */ {
+			if (!empty($code)) /* line 4 */ {
+				ob_start(fn() => '');
+				try {
+					echo '    <div';
+					echo ($ʟ_tmp = array_filter([$iterator->first ? 'active-tab' : null, 'sms-tab'])) ? ' class="' . LR\Filters::escapeHtmlAttr(implode(" ", array_unique($ʟ_tmp))) . '"' : "" /* line 5 */;
+					echo ' data-tab="';
+					echo LR\Filters::escapeHtmlAttr($iterator) /* line 5 */;
+					echo '" role="tab">';
+					ob_start();
+					try {
+						echo '
       <div class="sms-tab-inner">
         <div class="sms-tab-text">
-        Python
+        ';
+						echo LR\Filters::escapeHtmlText($el['title']['text']) /* line 8 */;
+						echo '
         </div>
       </div>
-    </div>
-    <div class="sms-tab" data-tab="2" role="tab">
-      <div class="sms-tab-inner">
-        <div class="sms-tab-text">
-        Python
-        </div>
-      </div>
-    </div>
-    <div class="sms-tab" data-tab="3" role="tab">
-      <div class="sms-tab-inner">
-        <div class="sms-tab-text">
-        Python
-        </div>
-      </div>
-    </div>
+    ';
 
+					} finally {
+						$ʟ_ifc[0] = rtrim(ob_get_flush()) === '';
+					}
+					echo '</div>
+';
+
+				} finally {
+					if ($ʟ_ifc[0] ?? null) {
+						ob_end_clean();
+					} else {
+						echo ob_get_clean();
+					}
+				}
+			}
+
+		}
+		$iterator = $ʟ_it = $ʟ_it->getParent();
+
+		echo '
   </div>
 
-  
+';
+		foreach ($iterator = $ʟ_it = new Latte\Essential\CachingIterator($code, $ʟ_it ?? null) as $el) /* line 15 */ {
+			if (!empty($code)) /* line 15 */ {
+				ob_start(fn() => '');
+				try {
+					echo '  <div id="sms-data-';
+					echo LR\Filters::escapeHtmlAttr($iterator) /* line 16 */;
+					echo '"';
+					echo ($ʟ_tmp = array_filter([$iterator->first ? 'active' : null, 'sms-code highlight-height'])) ? ' class="' . LR\Filters::escapeHtmlAttr(implode(" ", array_unique($ʟ_tmp))) . '"' : "" /* line 16 */;
+					echo ' >';
+					ob_start();
+					try {
+						echo '
+    <pre><code class="">';
+						echo LR\Filters::escapeHtmlText($el['code']['text']) /* line 17 */;
+						echo '</code></pre>
+  ';
 
-  <div id="sms-data-1" class="sms-code highlight-height active" >
-    <pre><code class="language-python">package main
-import "github.com/medianasms/go-rest-sdk"
-func main() {
-// you api key that generated from panel
-apiKey := "api-key"
-// create client instance
-sms := medianasms.New(apiKey)
-// send bulk message
-bulkID, err := sms.Send("+9810001",
-[]string{"98912xxxxxxx"}, "mediana is awesome")
-if err != nil {
-t.Error("error occurred ", err)}}
-      </code></pre>
-  </div>
-  <div id="sms-data-2" class="sms-code highlight-height" >
-    <pre><code class="language-python">package main
-import "github.com/medianasms/go-rest-sdk"
-func main() {
-// you api key that generated from panel
-apiKey := "api-key"
-// create client instance
-sms := medianasms.New(apiKey)
-// send bulk message
-bulkID, err := sms.Send("+9810001",
-[]string{"98912xxxxxxx"}, "mediana is awesome")
-if err != nil {
-t.Error("error occurred ", err)}}
-      </code></pre>
-  </div>
-  <div id="sms-data-3" class="sms-code highlight-height" >
-    <pre><code class="language-python">package main
-import "github.com/medianasms/go-rest-sdk"
-func main() {
-// you api key that generated from panel
-apiKey := "api-key"
-// create client instance
-sms := medianasms.New(apiKey)
-// send bulk message
-bulkID, err := sms.Send("+9810001",
-[]string{"98912xxxxxxx"}, "mediana is awesome")
-if err != nil {
-t.Error("error occurred ", err)}}
-      </code></pre>
-  </div>
+					} finally {
+						$ʟ_ifc[1] = rtrim(ob_get_flush()) === '';
+					}
+					echo '</div>
+';
 
+				} finally {
+					if ($ʟ_ifc[1] ?? null) {
+						ob_end_clean();
+					} else {
+						echo ob_get_clean();
+					}
+				}
+			}
 
+		}
+		$iterator = $ʟ_it = $ʟ_it->getParent();
 
+		echo '
 </div>';
+	}
+
+
+	public function prepare(): array
+	{
+		extract($this->params);
+
+		if (!$this->getReferringTemplate() || $this->getReferenceType() === 'extends') {
+			foreach (array_intersect_key(['el' => '4, 15'], $this->params) as $ʟ_v => $ʟ_l) {
+				trigger_error("Variable \$$ʟ_v overwritten in foreach on line $ʟ_l");
+			}
+		}
+		return get_defined_vars();
 	}
 }
